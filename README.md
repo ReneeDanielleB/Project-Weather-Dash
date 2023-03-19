@@ -5,7 +5,7 @@ User story:
 - As traveler I want to see the weather outlook for multiple cities so that I can plan a trip accordingly.
 
 # Deployed Application
-link -
+https://reneedanielleb.github.io/Project-Weather-Dash/
 
 Screenshot:
 
