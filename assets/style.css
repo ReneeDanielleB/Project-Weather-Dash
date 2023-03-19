@@ -1,19 +1,4 @@
-button {
-    background-color: aqua;
-    border-color: 1px solid black;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    background-color: rgb(146, 146, 244);
-    border: solid grey;
-    text-align: right;
-    width: 75%;
-    height: 200px;
-}
-/*.today-forecast {
+.today-forecast {
     background-color: rgb(146, 146, 244);
     padding: 20px;
     color: white;
@@ -37,7 +22,7 @@ button {
     min-height: 40px;
 }
 
-. {
+.error-msg {
     background-color: white;
     display: inline-block;
     padding: 6px;
@@ -46,10 +31,14 @@ button {
     margin-top: 6px;
 }
 
+.hide {
+    display: none;
+}
+
 .forecastCard {
     border: 1px solid black;
     margin-left: 15px;
     margin-bottom: 6px;
 }
 
-/responsive design
+/*responsive design

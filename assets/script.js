@@ -1,9 +1,9 @@
 //Note to self - Decide what method you want to use to fetch weather data & do more research on functions!
 
 //api key & location
-url = open weather api
+/*url = open weather api
 api-key = '4b3405d416msh98968868bc4e0b1p12b09ajsn475153bcf498'
-location = London
+location = London*/
 
 
 //display date
@@ -76,17 +76,114 @@ async function getData(lat, lon) {
 
 //display current weather forecast
 function createtodaysForecast(data) {
-	todayWrapper.innerHTML += "<"
+	todayWrapper.innerHTML += 
+	//code changed to jsx syntax - issue needs to resolved
+	/*<div class="d-flex align-items-center">
+		<h2>${data.city.name} (${data.city.country})</h2>
+		<img src="${getImageUrl(data.list[0].weather[0].icon)"
+		alt="${data.list[0].weather[0].description}"></img>
+	</div>
+	  <h3>
+		 ${dayjs().format("dddd D MMM YYYY")}
+	  </h3>
+	  <p>Temperature: ${Math.floor(data.list[0].main.temp)}&degc</p>
+	  <p>Humidity: ${Math.floor(data.list[0].main.humidity)}%</p>
+	  <p>Wind: ${Math.floor(data.list[0].main.wind.speed)} KPH</p>;*/
+ todayWrapper.appendChild(todaysForecast);
 }
 
+//5 day forecast
+function createForecast(data) {
+	let lastDayTime = timeOfDay(data.list);
+	let today = dayjs().format("DD");
+
+	for (var i = 0; i < data.list.length; i++) {
+		let day = data.list[i];
+		let futureDay = dayjs(day.dt_txt).format("DD");
+		let dayTime = dayjs(day.dt_txt).format("HH:mm");
+		let setTime = "12:00";
+
+		if (futureDay > today) {
+			if (futureDay == +today + 1) {
+				if (dayTime === setTime) {
+					createForecastData(day);
+				}
+			}
+
+			if (futureDay == +today + 2) {
+				if (dayTime === setTime) {
+					createForecastData(day);
+				}
+			}
+
+			if (futureDay == +today + 3) {
+				if (dayTime === setTime) {
+					createForecastData(day);
+				}
+			}
+
+			if (futureDay == +today + 4) {
+				if (dayTime === setTime) {
+					createForecastData(day);
+				}
+			}
+
+			if (futureDay == +today + 5) {
+				if (dayTime === setTime) {
+					createForecastData(day);
+				}
+			}
+		}
+	}
+}
+
+//clear card to display new city
+function clearItem() {
+	todaysForecast.innerHTML ="";
+}
+
+//display icon for each weather card(url)
+function getImageUrl(icon) {
+	return "http://openweathermap.org/img/wn/${icon}@2x.png";
+}
+
+//implement local storage
+function storeCity(city) {
+	let newCity = {name: city};
+
+	cityData.push(newCity);
+	localStorage.setItem("city-data", JSON.stringify(cityData));
+}
+
+//display stored data as history
+function cityHistory() {
+	let cityHistory = JSON.parse(localStorage.getItem("city-data")) [];
+
+	if (cityHistory.length > 0) {
+		clearHistory.classList.remove("hide");
+		historyWrapper.innerHTML ="";
+		forecast.innerHTML = "";
+		historyWrapper += cityHistory.map(
+			(cityName) =>
+			`<button id = "cityBtn" data-id = "${cityName.name}" 
+			class = "btnbtn-secondary mt-2 mb-2"> ${upperCase(cityName.name)}
+			</button>`
+		)
+		.join("");
+	}
+	for (let i = 0; i < cityBtn.length; i++) {
+		let eachBtn = cityBtn[i];
+		let dataId = eachBtn.dataset.id;
+
+		eachBtn.addEventListener("click", () => {
+			clearItem(); getCity(dataId);
+		});
+	}
+}
+cityHistory();
 
 
-
-
-
-
-
-
+function 
 
 /*var apiKey = '4b3405d416msh98968868bc4e0b1p12b09ajsn475153bcf498';
 var city = "London"
