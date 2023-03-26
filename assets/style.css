@@ -61,16 +61,16 @@ li {
     font-weight: 500;
     margin-top: 6px;
     width: 83%;
-    height: 300px;
+    height: 400px;
 }
 
 .forecast {
-    left: 6%; 
+    left: 5%;
     background-color: white;
     border: 3px solid white;
-    border-radius: 0.5rem;
+    border-radius: 0.7rem;
     padding: 3rem;
-    margin-top: 15px;
+    margin-top: 8px;
     margin-left: 0px;
     margin-bottom: 6px;
     height: 250px;
@@ -83,17 +83,26 @@ li {
     width: 100%;
 }
 
-.container {
+.forecast .card {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.current {
+    height: 250px;
+}
+
+.cards {
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
+    justify-content: ;
 }
 
 .card {
     background-image: url();
     background-color: white;
     border-radius: 0.5rem;
-    height: 280px;
+    height: 300px;
     width: 200px;
 }
 
