@@ -20,9 +20,16 @@ body {
   width: 100%; 
 }
 
+header {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
+    padding: 3rem;
+}
+
 .btn {
     margin: 5px;
-    padding: 2rem 2rem;
+    padding: 3rem 3rem;
     border: 3px solid palevioletred;
     border-spacing: 1rem;
     border-radius: 2px;
@@ -48,6 +55,7 @@ li {
 .list-group {
     background-color: white;
     display: inline-block;
+    border-radius: 0.5rem;
     padding: 3rem;
     color: black;
     font-weight: 500;
@@ -60,7 +68,7 @@ li {
     left: 6%; 
     background-color: white;
     border: 3px solid white;
-    border-radius: 0rem;
+    border-radius: 0.5rem;
     padding: 3rem;
     margin-top: 15px;
     margin-left: 0px;
@@ -73,6 +81,20 @@ li {
     flex-direction: row; 
     justify-content: ;
     width: 100%;
+}
+
+.container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.card {
+    background-image: url();
+    background-color: white;
+    border-radius: 0.5rem;
+    height: 280px;
+    width: 200px;
 }
 
 

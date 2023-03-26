@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <header class="container-fluid text-center text-white bg-dark p-2 weather-header">
+  <header class="container-fluid text-center text-white p-2 weather-header">
     <h1>Weather Dashboard</h1>
   </header>
 
@@ -46,10 +46,49 @@
       </aside>
 
       <div class="forecast col-lg-8 pb-3">
-        <section id="today" class="mt-3" role="region" aria-live="polite"></section>
+        <section id="today" class="mt-3" role="region" aria-live="polite">
+          <h2>Today's Forecast</h2>
+          <h4>City:</h4>
+          <p>Temp:</p>
+          <p>Wind:</p>
+          <p>Humidity:</p>
+        </section>
         <section id="forecast" class="row mt-3" role="region" aria-live="polite">
-          <div>
-            
+          <div class="container">
+            <div class="card">
+              <h4>Day 1</h4>
+              <p>Temp:</p>
+              <p>Wind:</p>
+              <p>Humidity:</p>
+            </div>
+
+            <div class="card">
+              <h4>Day 2</h4>
+              <p>Temp:</p>
+              <p>Wind:</p>
+              <p>Humidity:</p>
+            </div>
+
+            <div class="card">
+              <h4>Day 3</h4>
+              <p>Temp:</p>
+              <p>Wind:</p>
+              <p>Humidity:</p>
+            </div>
+
+            <div class="card">
+              <h4>Day 4</h4>
+              <p>Temp:</p>
+              <p>Wind:</p>
+              <p>Humidity:</p>
+            </div>
+
+            <div class="card">
+              <h4>Day 5</h4>
+              <p>Temp:</p>
+              <p>Wind:</p>
+              <p>Humidity:</p>
+            </div>
           </div>
         </section>
       </div>
