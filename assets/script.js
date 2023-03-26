@@ -1,9 +1,9 @@
-//Note to self - Decide what method you want to use to fetch weather data & do more research on functions!
-
 //api key & location
-/*url = open weather api
-api-key = '4b3405d416msh98968868bc4e0b1p12b09ajsn475153bcf498'
-location = London*/
+const apiKey = "4b3405d416msh98968868bc4e0b1p12b09ajsn475153bcf498"
+const url = ""
+location = London
+
+//Current Weather
 
 
 //display date
