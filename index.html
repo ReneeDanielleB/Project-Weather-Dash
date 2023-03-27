@@ -20,13 +20,13 @@
   <div class="container container-fluid banner" style="max-width: 1400px">
     <div class="row">
       <aside class="col-lg-3 pb-3">
-        <h2 id="form-heading" class="mt-1 h3 form-label">
+        <h2 id="form-heading" class="mt-1 h3 form-title">
           Search for a City:
         </h2>
         <form id="search-form" class="form">
           <div class="m-0">
             <div class="d-flex flex-column">
-              <input class="form-input weather-search col-lg-10" type="text" 
+              <input class="form-text weather-search col-lg-10" type="text" 
                id="search-input" placeholder="City"
                aria-labelledby="form-heading" aria-controls="today forecast" />
 
@@ -45,49 +45,61 @@
         </div>
       </aside>
 
-      <div class="forecast card col-lg-8 pb-3">
+      <div class="forecast loading col-lg-8 pb-3">
         <section id="today" class="current mt-3" role="region" aria-live="polite">
           <h2>Today's Forecast</h2>
-          <h4>City:</h4>
-          <p>Temp:</p>
-          <p>Wind:</p>
-          <p>Humidity:</p>
+          <h4 class="city"></h4>
+          <p class="icon">icon</p>
+          <p class="description">description</p>
+          <p class="temp">temp</p>
+          <p class="wind">wind</p>
+          <p class="humidity">wind</p>
         </section>
         <section id="forecast" class="mt-2" role="region" aria-live="polite">
           <div class="cards">
             <div class="daily-card">
               <h4>Day 1</h4>
-              <p>Temp:</p>
-              <p>Wind:</p>
-              <p>Humidity:</p>
+              <p class="icon">icon</p>
+              <p class="description">desc</p>
+              <p class="temp">temp</p>
+              <p class="wind">wind</p>
+              <p class="humidity">hum</p>
             </div>
 
             <div class="daily-card">
               <h4>Day 2</h4>
-              <p>Temp:</p>
-              <p>Wind:</p>
-              <p>Humidity:</p>
+              <p class="icon">i</p>
+              <p class="description">descr</p>
+              <p class="temp">te</p>
+              <p class="wind">w</p>
+              <p class="humidity">h</p>
             </div>
 
             <div class="daily-card">
               <h4>Day 3</h4>
-              <p>Temp:</p>
-              <p>Wind:</p>
-              <p>Humidity:</p>
+              <p class="icon">i</p>
+              <p class="description">d</p>
+              <p class="temp">t</p>
+              <p class="wind">w</p>
+              <p class="humidity">h</p>
             </div>
 
             <div class="daily-card">
               <h4>Day 4</h4>
-              <p>Temp:</p>
-              <p>Wind:</p>
-              <p>Humidity:</p>
+              <p class="icon"></p>
+              <p class="description"></p>
+              <p class="temp"></p>
+              <p class="wind"></p>
+              <p class="humidity"></p>
             </div>
 
             <div class="daily-card">
               <h4>Day 5</h4>
-              <p>Temp:</p>
-              <p>Wind:</p>
-              <p>Humidity:</p>
+              <p class="icon"></p>
+              <p class="description"></p>
+              <p class="temp"></p>
+              <p class="wind"></p>
+              <p class="humidity"></p>
             </div>
           </div>
         </section>
@@ -95,16 +107,15 @@
     </div>
   </div>
 
+  <footer>
+    <p class = "copyright">&copy; 2023 - Made by ReneeDanielleB &hearts;</p>
+  </footer>
+
+  <script src="../assets/script.js" defer></script>
   <!-- Moment.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
   <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="assets/script.js"></script>
-
-  
-  <footer>
-    <p class = "copyright">&copy; 2023 - Made by ReneeDanielleB &hearts;</p>
-  </footer>
 </body>
 
 </html>
